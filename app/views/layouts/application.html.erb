@@ -12,6 +12,7 @@
 <body>
     <p>
       <% if @current_user %>
+        <a href="/places">Home</a>
         Hi, <%= @current_user["username"] %>
         <a href="/logout">Logout</a>
       <% else %>
