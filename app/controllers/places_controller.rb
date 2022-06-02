@@ -7,13 +7,8 @@ class PlacesController < ApplicationController
   end
 
   def show
-    if @current_user
     @place = Place.find_by({ "id" => params["id"] })
-    @posts = Post.where({ "place_id" => @place["id"] })
-    else
-      flash["notice"] = "You must be logged in."
-    end
-    redirect_to "/login"
+    @posts = Post.where({ "place_id" => @place["id"] })    
   end
 
   def new
