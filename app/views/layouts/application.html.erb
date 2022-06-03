@@ -13,6 +13,7 @@
   </head>
 
 <body>
+<div class="container mt-3">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -34,12 +35,16 @@
     </div>
 </nav>
 
-    <p>
-      <%= flash["notice"] %>
-    </p>
+
+    <div class="row">
+      <div class="col text-center">
+        <%= flash["notice"] %>
+      </div>
+    </div>
 
     <%= yield %>
+  
 </body>
-
+</div>
 
 </html>
